@@ -21,7 +21,7 @@ ngrok http 5000
 [**Let me select individual events.**]を選択し，[**Pull requests**]にチェック  
 
 ### 事前準備4.Collaboratorの追加
-リポジトリのページから[**Settings**]→[**Manage access**]と移動し，共同開発者の追加を行う．  
+リポジトリのページから[**Settings**]→[**Collaborators**]と移動し，共同開発者の追加を行う．  
 [**Add people**]をクリックし，ユーザー名を入力して共同開発者を追加する．  
 共同開発者のユーザー名については実験用フォルダのREADME.txtを確認してください．
 
