@@ -52,7 +52,7 @@ python server.py
 javaファイルですが、UTF-8でエンコードしています．  
 コンパイル時にうまく動作しない場合があるので以下のコマンドでコンパイルしてください．
 ```
-javac encoding utf-8 [ファイル名]
+javac -encoding utf-8 [ファイル名]
 ```
 
 ### 1.チュートリアル
