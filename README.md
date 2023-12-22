@@ -81,29 +81,18 @@ $ java GameMain
 ```
 
 #### 課題2 Playerの手の決定とその表示
-[変更するファイル]　GameMain.java, Player.java, Hand.java
+[変更するファイル]　GameMain.java, Hand.java
 ```
 [変更内容](変更箇所のみ抜粋)
 ・GameMain.java
     // 課題2 Playerの手の決定とその表示
-    // PlayerクラスのdecidesPlayerHandメソッドとHandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
-    int playerHand = Player.decidesPlayerHand();
-    System.out.println("プレイヤー : " + Hand.getHandName(playerHand));
-
-・Player.java
-    // 課題2 Playerの手の決定とその表示
-    // 1~3以外の入力に対してエラー文の表示および再入力させる処理
-    while (true) {
-      try {
-        playerHand = Integer.parseInt(scanner.next());
-        if (playerHand < 1 || playerHand > 3) {
-          System.out.println("1~3の数値を入力して下さい。");
-          continue;
-        }
-        break;
-      } catch (Exception e) {
-        System.out.println("1~3の数値を入力して下さい。");
-      }
+    // HandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
+    if (args.length == 1) {
+      int playerHand = Integer.parseInt(args[0]);
+      System.out.println("プレイヤー : " + Hand.getHandName(playerHand));
+    } else {
+      System.out.println("コマンドライン引数でプレイヤーの手を決定して下さい");
+      return;
     }
 
 ・Hand.java
@@ -117,28 +106,16 @@ $ java GameMain
       handName = "パー";
 ```
 ```
-[実行例]（<- はユーザ⼊⼒）
-$ java GameMain
+[実行例]
+$ java GameMain 1
 1:グー 2:チョキ 3:パー
 じゃんけん...
-1　<-
 プレイヤー : グー
 
 $ java GameMain
 1:グー 2:チョキ 3:パー
 じゃんけん...
-4　<-
-1~3の数値を入力して下さい。
-2　<-
-プレイヤー : チョキ
- 
-$ java GameMain
-1:グー 2:チョキ 3:パー
-じゃんけん...
-three　<-
-1~3の数値を入力して下さい。
-3　<-
-プレイヤー : パー
+コマンドライン引数でプレイヤーの手を決定して下さい
 ```
 
 ### 2.異常系シナリオ
@@ -165,10 +142,9 @@ three　<-
 ```
 ```
 [実行例]
-$ java GameMain
+$ java GameMain 1
 1:グー 2:チョキ 3:パー
 じゃんけん...
-1　<-
 プレイヤー : グー
 コンピュータ : パー
 ```
@@ -179,8 +155,13 @@ $ java GameMain
 [変更内容](変更箇所のみ抜粋)
 ・GameMain.java
     // 課題2 Playerの手の決定とその表示
-    // PlayerクラスのdecidesPlayerHandメソッドとHandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
-    int playerHand = Player.decidesPlayerHand();
+    // HandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
+    if (args.length == 1) {
+      int playerHand = Integer.parseInt(args[0]);
+    } else {
+      System.out.println("コマンドライン引数でプレイヤーの手を決定して下さい");
+      return;
+    }
 
     // 課題3 Computerの手の決定とその表示
     // ComputerクラスのdecidesComputerHandメソッドとHandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
