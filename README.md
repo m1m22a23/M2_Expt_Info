@@ -89,12 +89,12 @@ $ java GameMain
     // 課題2 Playerの手の決定とその表示
     // HandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
     if (args.length == 1) {
-      int playerHand = Integer.parseInt(args[0]);
-      System.out.println("プレイヤー : " + Hand.getHandName(playerHand));
+      playerHand = Integer.parseInt(args[0]);
     } else {
       System.out.println("コマンドライン引数でプレイヤーの手を決定して下さい");
       return;
     }
+    System.out.println("プレイヤー : " + Hand.getHandName(playerHand));
 
 ・Hand.java
     // 課題2 Playerの手の決定とその表示
@@ -158,7 +158,7 @@ $ java GameMain 1
     // 課題2 Playerの手の決定とその表示
     // HandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
     if (args.length == 1) {
-      int playerHand = Integer.parseInt(args[0]);
+      playerHand = Integer.parseInt(args[0]);
     } else {
       System.out.println("コマンドライン引数でプレイヤーの手を決定して下さい");
       return;
@@ -190,26 +190,23 @@ $ java GameMain 1
 ```
 ```
 [実行例]
-$ java GameMain
+$ java GameMain 1
 1:グー 2:チョキ 3:パー
 じゃんけん...
-1　<-
 プレイヤー : グー
 コンピュータ : パー
 負け
 
-$ java GameMain
+$ java GameMain 2
 1:グー 2:チョキ 3:パー
 じゃんけん...
-2　<-
 プレイヤー : チョキ
 コンピュータ : チョキ
 あいこ
 
-$ java GameMain
+$ java GameMain 3
 1:グー 2:チョキ 3:パー
 じゃんけん...
-3　<-
 プレイヤー : パー
 コンピュータ : グー
 勝ち
