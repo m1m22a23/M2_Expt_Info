@@ -69,6 +69,7 @@ javac encoding utf-8 [ファイル名]
 ```
 [変更内容](変更箇所のみ抜粋)
   public static void main(String[] args) {
+    int playerHand;
     // 課題1 文章の表示
     System.out.println("1:グー 2:チョキ 3:パー");
     System.out.println("じゃんけん...");
