@@ -68,10 +68,10 @@ javac encoding utf-8 [ファイル名]
 [変更するファイル]GameMain.java
 ```
 [変更内容](変更箇所のみ抜粋)
-public static void main(String[] args) {
-  //課題1 文章の表示
-  System.out.println("1:グー 2:チョキ 3:パー");
-  System.out.println("じゃんけん...");
+  public static void main(String[] args) {
+    // 課題1 文章の表示
+    System.out.println("1:グー 2:チョキ 3:パー");
+    System.out.println("じゃんけん...");
 ```
 ```
 [実行例]
@@ -85,33 +85,36 @@ $ java GameMain
 ```
 [変更内容](変更箇所のみ抜粋)
 ・GameMain.java
-  //課題2 Playerの手の決定とその表示
-  //PlayerクラスのdecidesPlayerHandメソッドとHandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
-  int playerHand = Player.decidesPlayerHand();
-  System.out.println("プレイヤー : " + Hand.getHandName(playerHand));
+    // 課題2 Playerの手の決定とその表示
+    // PlayerクラスのdecidesPlayerHandメソッドとHandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
+    int playerHand = Player.decidesPlayerHand();
+    System.out.println("プレイヤー : " + Hand.getHandName(playerHand));
 
 ・Player.java
-  //課題2 Playerの手の決定とその表示
-  //1~3以外の入力に対してエラー文の表示および再入力させる処理
-  while(true) {
-    try {
-      playerHand = Integer.parseInt(scanner.next());
-      if (playerHand < 1 || playerHand > 3) {
+    // 課題2 Playerの手の決定とその表示
+    // 1~3以外の入力に対してエラー文の表示および再入力させる処理
+    while (true) {
+      try {
+        playerHand = Integer.parseInt(scanner.next());
+        if (playerHand < 1 || playerHand > 3) {
+          System.out.println("1~3の数値を入力して下さい。");
+          continue;
+        }
+        break;
+      } catch (Exception e) {
         System.out.println("1~3の数値を入力して下さい。");
-        continue;
       }
-      break;
-    } catch(Exception e) {
-      System.out.println("1~3の数値を入力して下さい。");
     }
-  }
 
 ・Hand.java
-  //課題2 Playerの手の決定とその表示
-  //1ならば"グー",2ならば"チョキ",3ならば"パー"を返す
-  if (hand == GU) handName = "グー";
-  else if (hand == CHOKI) handName = "チョキ";
-  else if (hand == PA) handName = "パー";
+    // 課題2 Playerの手の決定とその表示
+    // 1ならば"グー",2ならば"チョキ",3ならば"パー"を返す
+    if (hand == GU)
+      handName = "グー";
+    else if (hand == CHOKI)
+      handName = "チョキ";
+    else if (hand == PA)
+      handName = "パー";
 ```
 ```
 [実行例]（<- はユーザ⼊⼒）
@@ -148,17 +151,17 @@ three　<-
 ```
 [変更内容](変更箇所のみ抜粋)
 ・GameMain.java
-  //課題3 Computerの手の決定とその表示
-  //ComputerクラスのdecidesComputerHandメソッドとHandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
-  int computerHand = Computer.decidesComputerHand();
-  System.out.println("コンピュータ : " + Hand.getHandName(computerHand));
+    // 課題3 Computerの手の決定とその表示
+    // ComputerクラスのdecidesComputerHandメソッドとHandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
+    int computerHand = Computer.decidesComputerHand();
+    System.out.println("コンピュータ : " + Hand.getHandName(computerHand));
 
 ・Computer.java
-  //課題3 Computerの手の決定とその表示
-  //Randomメソッドを使って1~3の数値を返す
-  Random random = new Random();
-  int rnd = random.nextInt(3)+1;
-  return rnd;
+    // 課題3 Computerの手の決定とその表示
+    // Randomメソッドを使って1~3の数値を返す
+    Random random = new Random();
+    int rnd = random.nextInt(3) + 1;
+    return rnd;
 ```
 ```
 [実行例]
@@ -175,32 +178,33 @@ $ java GameMain
 ```
 [変更内容](変更箇所のみ抜粋)
 ・GameMain.java
-  //課題2 Playerの手の決定とその表示
-  //PlayerクラスのdecidesPlayerHandメソッドとHandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
-  int playerHand = Player.decidesPlayerHand();
-	
-  //課題3 Computerの手の決定とその表示
-  //ComputerクラスのdecidesComputerHandメソッドとHandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
-  int computerHand = Computer.decidesComputerHand();
-	
-  //課題4 勝敗判定とその表示
-  //課題2,3において実装したPlayerおよびComputerの手の表示はVictoryOrDefeatクラスに移動する
-  VictoryOrDefeat.decisionVictoryOrDefeat(computerHand, playerHand);
+    // 課題2 Playerの手の決定とその表示
+    // PlayerクラスのdecidesPlayerHandメソッドとHandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
+    int playerHand = Player.decidesPlayerHand();
+
+    // 課題3 Computerの手の決定とその表示
+    // ComputerクラスのdecidesComputerHandメソッドとHandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
+    int computerHand = Computer.decidesComputerHand();
+
+    // 課題4 勝敗判定とその表示
+    // 課題2,3において実装したPlayerおよびComputerの手の表示はVictoryOrDefeatクラスに移動する
+    VictoryOrDefeat.decisionVictoryOrDefeat(computerHand, playerHand);
 
 ・VictoryOrDefeat.java
-  //課題4 勝敗判定とその表示
-  //課題2,3においてGameMain.javaに実装したPlayerおよびComputerの手の表示は以下に移動する
-  System.out.println("プレイヤー : " + Hand.getHandName(playerHand));
-  System.out.println("コンピュータ : " + Hand.getHandName(computerHand));
-    
-  //int型のplayerHand,computerHandを使って勝敗判定を表示する
-  if (playerHand == computerHand) {
-    System.out.println("あいこ");
-  } else if ((playerHand == 1 && computerHand == 2) || (playerHand == 2 && computerHand == 3) || (playerHand == 3 && computerHand == 1)) {
-    System.out.println("勝ち");
-  } else {
-    System.out.println("負け");
-  }
+    // 課題4 勝敗判定とその表示
+    // 課題2,3においてGameMain.javaに実装したPlayerおよびComputerの手の表示は以下に移動する
+    System.out.println("プレイヤー : " + Hand.getHandName(playerHand));
+    System.out.println("コンピュータ : " + Hand.getHandName(computerHand));
+
+    // int型のplayerHand,computerHandを使って勝敗判定を表示する
+    if (playerHand == computerHand) {
+      System.out.println("あいこ");
+    } else if ((playerHand == 1 && computerHand == 2) || (playerHand == 2 && computerHand == 3)
+        || (playerHand == 3 && computerHand == 1)) {
+      System.out.println("勝ち");
+    } else {
+      System.out.println("負け");
+    }
 ```
 ```
 [実行例]
