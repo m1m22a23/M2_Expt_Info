@@ -20,6 +20,8 @@ ngrok http 5000
 **Content type**：application/json  
 [**Let me select individual events.**]を選択し，[**Pull requests**]にチェック  
 
+最後に[**add webhook**]でWebhookの設定は完了です．  
+
 ### 事前準備4.Collaboratorの追加
 リポジトリのページから[**Settings**]→[**Collaborators**]と移動し，共同開発者の追加を行う．  
 [**Add people**]をクリックし，ユーザー名を入力して共同開発者を追加する．  
