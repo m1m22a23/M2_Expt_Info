@@ -14,6 +14,7 @@ https://drive.google.com/drive/my-drive/ から実験に必要な以下の2つ�
 
 設定が完了すると画像のようにタスクバーに[**AG**]という緑色のアイコンが表示されるので，これを右クリックしてください．  
 ![AG_green](https://github.com/m1m22a23/M2_Expt_Info/assets/56813109/4e5b5be3-ae67-4d4f-ba95-1529454c00f1)  
+
 [**全画面録画**]にチェックが入ってることを確認し，録画開始をクリックして画像のように[**AG**]が赤色になることを確認してください．  
 ![AG_red](https://github.com/m1m22a23/M2_Expt_Info/assets/56813109/e5d21966-9934-4f7a-b415-0ea440bddb28)  
 
