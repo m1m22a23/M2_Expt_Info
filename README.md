@@ -67,11 +67,11 @@ ngrok http 5000
 実験用フォルダ内の**app.py**および**server.py**をコマンドプロンプトから実行してください．  
 その際，仕様上の観点から，**app.py**を実行するプロンプトと**server.py**を実行するプロンプトの二つのウィンドウを立ち上げてください．  
 実行の際のコマンドは以下の通りです．  
-[app.py]
+[app.py(ファイルの場所：GitCollabSim\GitHub\expt\bot)]
 ```
 python app.py
 ```
-[server.py]
+[server.py(ファイルの場所：GitCollabSim\GitHub\expt)]
 ```
 python server.py
 ```
