@@ -77,7 +77,7 @@ python server.py
 ```
 
 ### 事前準備6.Unityの実行
-実験用フォルダ内の**GitCollabSim.exe**を起動してください．  
+実験用フォルダ内の**GitCollabSim.exe**をエクスプローラーから起動してください．  
 以降はGitCollabSim内の説明および以下に従って実験を進めてください．
 
 ## 実験について
