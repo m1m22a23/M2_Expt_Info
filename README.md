@@ -68,18 +68,18 @@ ngrok http 5000
 実験用フォルダ内の**app.py**および**server.py**をコマンドプロンプトから実行してください．  
 その際，仕様上の観点から，**app.py**を実行するプロンプトと**server.py**を実行するプロンプトの二つのウィンドウを立ち上げてください．  
 実行の際のコマンドは以下の通りです．  
-[app.py(ファイルの場所：GitCollabSim\GitHub\expt\bot)]
+[app.py(ファイルの場所：Desktop\GitCollabSim\GitHub\expt\bot)]
 ```
 python app.py
 ```
-[server.py(ファイルの場所：GitCollabSim\GitHub\expt)]
+[server.py(ファイルの場所：Desktop\GitCollabSim\GitHub\expt)]
 ```
 python server.py
 ```
 
 ### 事前準備6.Unityの実行
 実験用フォルダ内の**GitCollabSim.exe**をエクスプローラーから起動してください．
-ファイルの場所はGitCollabSim\Unityのフォルダ内です．
+ファイルの場所はDesktop\GitCollabSim\Unityのフォルダ内です．
 以降はGitCollabSim内の説明および以下に従って実験を進めてください．
 
 ## 実験について
