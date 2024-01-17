@@ -31,7 +31,7 @@ GitHubアカウントについては実験用フォルダのREADME.txtを確認�
 
 **Repository Name**：半角英字で「苗字-(ﾊｲﾌﾝ)日付」としてください．(例：tanaka-0105)  
 **Description**：空欄で構いません．  
-**Public**と**Private**は**Public**を選択してください．  
+**Public**を選択してください．  
 **Initialize this repository with**の3つの項目はチェックが外れている，もしくはNoneとなっている状態にしてください．  
 
 設定が完了したら画面下部の**Create repository**を選択して新規リポジトリを作成してください．
