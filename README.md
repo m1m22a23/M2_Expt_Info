@@ -6,11 +6,12 @@ https://drive.google.com/drive/my-drive/ から実験に必要な以下の2つ�
 **GitCollabSim**：実験用フォルダ  
 
 ### 2.画面録画設定
-**AGDRec_132F**のフォルダ内にある**AGDRec64.exe**を起動してください．  
-設定内容は以下の通りです．  
+**AGDRec_132F**のフォルダ内にある**AGDRec64.exe**を起動してください．    
 
 コーデック：Windows Media Video  
 エンコードモード：リアルタイムエンコード  
+
+上記の通りに設定ができたら[**OK**]を押してください
 
 設定が完了すると画像のようにタスクバーに[**AG**]という緑色のアイコンが表示されるので，これを右クリックしてください．  
 ![AG_green](https://github.com/m1m22a23/M2_Expt_Info/assets/56813109/4e5b5be3-ae67-4d4f-ba95-1529454c00f1)  
