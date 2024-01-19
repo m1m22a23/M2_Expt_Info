@@ -114,7 +114,7 @@ javac -encoding utf-8 [ファイル名]
 [変更内容](変更箇所のみ抜粋)
   public static void main(String[] args) {
     int playerHand;
-    // 課題1 文章の表示
+    // 課題User-1 文章の表示
     System.out.println("1:グー 2:チョキ 3:パー");
     System.out.println("じゃんけん...");
 ```
@@ -135,7 +135,7 @@ $ java GameMain
 ```
 [変更内容](変更箇所のみ抜粋)
 ・GameMain.java
-    // 課題2 Playerの手の決定とその表示
+    // 課題Bot-1 Playerの手の決定とその表示
     // HandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
     if (args.length == 1) {
       playerHand = Integer.parseInt(args[0]);
@@ -146,7 +146,7 @@ $ java GameMain
     System.out.println("プレイヤー : " + Hand.getHandName(playerHand));
 
 ・Hand.java
-    // 課題2 Playerの手の決定とその表示
+    // 課題Bot-1 Playerの手の決定とその表示
     // 1ならば"グー",2ならば"チョキ",3ならば"パー"を返す
     if (hand == GU)
       handName = "グー";
@@ -182,13 +182,13 @@ $ java GameMain
 ```
 [変更内容](変更箇所のみ抜粋)
 ・GameMain.java
-    // 課題3 Computerの手の決定とその表示
+    // 課題User-2 Computerの手の決定とその表示
     // ComputerクラスのdecidesComputerHandメソッドとHandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
     int computerHand = Computer.decidesComputerHand();
     System.out.println("コンピュータ : " + Hand.getHandName(computerHand));
 
 ・Computer.java
-    // 課題3 Computerの手の決定とその表示
+    // 課題User-2 Computerの手の決定とその表示
     // Randomメソッドを使って1~3の数値を返す
     Random random = new Random();
     int rnd = random.nextInt(3) + 1;
@@ -213,7 +213,7 @@ $ java GameMain 1
 ```
 [変更内容](変更箇所のみ抜粋)
 ・GameMain.java
-    // 課題2 Playerの手の決定とその表示
+    // 課題Bot-1 Playerの手の決定とその表示
     // HandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
     if (args.length == 1) {
       playerHand = Integer.parseInt(args[0]);
@@ -222,17 +222,17 @@ $ java GameMain 1
       return;
     }
 
-    // 課題3 Computerの手の決定とその表示
+    // 課題User-2 Computerの手の決定とその表示
     // ComputerクラスのdecidesComputerHandメソッドとHandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
     int computerHand = Computer.decidesComputerHand();
 
-    // 課題4 勝敗判定とその表示
-    // 課題2,3において実装したPlayerおよびComputerの手の表示はVictoryOrDefeatクラスに移動する
+    // 課題Bot-2 勝敗判定とその表示
+    // 課題Bot-1,User-2において実装したPlayerおよびComputerの手の表示はVictoryOrDefeatクラスに移動する
     VictoryOrDefeat.decisionVictoryOrDefeat(computerHand, playerHand);
 
 ・VictoryOrDefeat.java
     // 課題4 勝敗判定とその表示
-    // 課題2,3においてGameMain.javaに実装したPlayerおよびComputerの手の表示は以下に移動する
+    // 課題Bot-1,User-2においてGameMain.javaに実装したPlayerおよびComputerの手の表示は以下に移動する
     System.out.println("プレイヤー : " + Hand.getHandName(playerHand));
     System.out.println("コンピュータ : " + Hand.getHandName(computerHand));
 
